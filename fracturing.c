@@ -9,13 +9,22 @@
 // Output: dimensions of a circle based off user input
 // //************************************************************
 
+#include <stdio.h>
+#include <math.h>
 #define PI 3.14159
 
-double calcculateDistance();    //calculate the distance between points
+double calcculateDistance(int arg1);    //calculate the distance between points
 
-double calculatePerimeter();    //calculate the perimeter
+  double Distance = arg1 * 2;
 
-double calculateArea();    //calculate the area
+double calculatePerimeter(int arg1);    //calculate the perimeter
+
+  double Perimeter = arg1 * 2 * PI;
+
+double calculateArea(int arg1);    //calculate the area
+
+  radiussquared = pow(double arg1);
+  Area = radiussquared * PI
 
 double calculateWidth();    //calculate the width
 
