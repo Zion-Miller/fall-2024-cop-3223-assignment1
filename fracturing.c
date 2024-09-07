@@ -13,7 +13,7 @@
 #include <math.h>
 #define PI 3.14159
 
-double askForUserInput() {
+double askForUserInput() {    //ask for user input
   double value;
   printf("Enter a value: ");
   scanf("%lf", &value);
@@ -45,15 +45,14 @@ double calculatePerimeter();    //calculate the perimeter
   double Perimeter = calculateDistance() * PI;
 
 double calculateArea();    //calculate the area
+  radius = calculateDistance / 2
 
-  radiussquared = pow(double arg1, 2);
+  radiussquared = pow(radius, 2);
   Area = radiussquared * PI
 
 double calculateWidth();    //calculate the width
-
-double calculateHeight();    //calculate the height
-
-double askForUserInput();    //ask for user input
+  
+double calculateHeight();    //calculate the height 
 
 int main(int argc, char **argv) {    //main function
   calculateDistance();
@@ -61,4 +60,5 @@ int main(int argc, char **argv) {    //main function
   calculateArea();
   calculateWidth();
 
-  
+  return 0;
+}
