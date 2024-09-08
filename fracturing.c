@@ -36,7 +36,7 @@ void helperFunction(double x1, double x2, double y1, double y2) {   //void funct
 
 double calculateDistance() {    //calculate the distance between points
   double x1, x2, y1, y2;  //declare variables
-  helperFunction(&x1, &x2, &y1, &y2);   //get coordinates
+  helperFunction(x1, x2, y1, y2);   //get coordinates
   //calculate distance, or diameter of the circle
   double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
 
