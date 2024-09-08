@@ -15,7 +15,7 @@
 
 #define PI 3.14159
 
-double askForUserInput() {    //ask for user input
+double askForUserInput() {    //ask for user input (bonus function)
   double value;
   printf("Enter a value: "); //ask for value
   scanf("%lf", &value);   //scan the value entered into variable
@@ -23,7 +23,7 @@ double askForUserInput() {    //ask for user input
 }
 
 void helperFunction(double x1, double x2, double y1, double y2) {   //void function so there's no return
-  //ask for and store coordinate values
+  //ask for and then store coordinate values using our askForUserInput function
   printf("Enter x coordinate #1: \n");  
   x1 = askForUserInput();    
   printf("Enter x coordinate #2: \n");
@@ -50,38 +50,38 @@ double calculateDistance() {    //calculate the distance between points
 double calculateWidth()  {   //calculate the width
   //since it is a circle, width is the same as distance
   double Distance = calculateDistance();    
-  printf("The width of the city encompassed by your request is width = %.3f\n", Distance);
-  return 1.0;
+  printf("The width of the city encompassed by your request is width = %.3f\n", Distance);    //required output
+  return 1.0;   //difficulty
 }    
 
 double calculateHeight()    {   //calculate the height 
   //since it is a cicle, height is the same as distance
   double Distance = calculateDistance();
-  printf("The height of the city encompassed by your request is height = %.3f\n", Distance);
+  printf("The height of the city encompassed by your request is height = %.3f\n", Distance);    //required output
 
-  return 1.0;
+  return 1.0; //difficulty
 }    
 
 double calculatePerimeter()   {    //calculate the perimeter
+  //perimeter of a circle is diameter * pi
+  double Distance = calculateDistance();  //bring in the distance to avoid repitition
+  double perimeter = (Distance * PI);   
+  printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);   //required output
 
-  double Distance = calculateDistance();
-  double perimeter = (Distance * PI);
-  printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);
-
-  return 3.0;
+  return 1.0; //difficulty
 }
 
 double calculateArea() {    //calculate the area
-
-  double Distance = calculateDistance();
-  double radius = Distance / 2;
+  //area of a circle is pi*r^2
+  double Distance = calculateDistance();  //import distance function to avoid repitition
+  double radius = Distance / 2;   //
   double Area1 = (pow(radius, 2) * PI);
   printf("The area of the city encompassed by your request is Area = %.3f\n", Area1);
 
-  return 1.0;
+  return 1.0;   //difficulty
 }
 
-int main(int argc, char **argv) {    //main function
+int main(int argc, char **argv) {    //main function copied from pdf
   calculateDistance();
   calculatePerimeter();
   calculateArea();
