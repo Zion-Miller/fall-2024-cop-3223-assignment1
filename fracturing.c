@@ -43,38 +43,26 @@ double calculateDistance() {    //calculate the distance between points
 }
 
 double calculateWidth()  {   //calculate the width
-  double x1, x2, y1, y2;
+  double x1, x2, y1, y2, distance, width;
   double distance = calculateDistance(&x1, &x2, &y1, &y2);
-<<<<<<< HEAD
   double width = fabs(x2-x1); 
-=======
-  double width = fabs(x2-x1);
-  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
-  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
->>>>>>> refs/remotes/origin/main
   printf("The width of the city encompassed by your request is width = %.3f\n", width);
   return 1.0;
 }    
 
 double calculateHeight()    {   //calculate the height 
-  double x1, x2, y1, y2;
+  double x1, x2, y1, y2, distance, height;
   double distance = calculateDistance(&x1, &x2, &y1, &y2);
   double height = fabs(y2-y1);
-<<<<<<< HEAD
-=======
-  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
-  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
->>>>>>> refs/remotes/origin/main
   printf("The height of the city encompassed by your request is height = %.3f\n", height);
 
   return 1.0;
 }    
 
 double calculatePerimeter()   {    //calculate the perimeter
-<<<<<<< HEAD
 
   double x1, x2, y1, y2, Distance;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
+  double Distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
   double perimeter = (Distance * PI);
   printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);
 
@@ -83,35 +71,12 @@ double calculatePerimeter()   {    //calculate the perimeter
 
 double calculateArea() {    //calculate the area
   double x1, x2, y1, y2, Distance, radius, radiussquared, Area1;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
+  double Distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
   radius = double (Distance / 2);
   radiussquared = double pow(radius, 2);
   Area1 = double (radiussquared * PI);
   printf("The area of the city encompassed by your request is Area = %.3f\n", Area1);
 
-=======
-
-  double x1, x2, y1, y2, Distance;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
-  double perimeter = (Distance * PI);
-  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
-  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
-  printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);
-
-  return 3.0;
-}
-
-double calculateArea() {    //calculate the area
-  double x1, x2, y1, y2, Distance, radius, radiussquared, Area1;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
-  radius = (Distance / 2);
-  radiussquared = pow(radius, 2);
-  Area1 = radiussquared * PI;
-  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
-  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
-  printf("The area of the city encompassed by your request is Area = %.3f\n", Area1);
-
->>>>>>> refs/remotes/origin/main
   return 1.0;
 }
 
@@ -120,6 +85,7 @@ int main(int argc, char **argv) {    //main function
   calculatePerimeter();
   calculateArea();
   calculateWidth();
+  calculateHeight();
 
   return 0;
 }
