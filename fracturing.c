@@ -16,7 +16,7 @@
 
 double askForUserInput() {    //ask for user input
   double value;
-  printf("Enter a value: ");
+  printf("Enter a value: \n");
   scanf("%lf", &value);
   return value;
 }
@@ -79,10 +79,10 @@ double calculateArea();    //calculate the area
   double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
   radius = Distance / 2;
   radiussquared = pow(radius, 2);
-  Area = radiussquared * PI;
+  Area1 = radiussquared * PI;
   printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
   printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
-  printf("The area of the city encompassed by your request is Area = %.3f\n", Area);
+  printf("The area of the city encompassed by your request is Area = %.3f\n", Area1);
 
 return double 1.0
 
