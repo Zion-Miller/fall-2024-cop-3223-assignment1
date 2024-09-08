@@ -1,6 +1,7 @@
 //***************************************************************
 // fracturing.c
 // Author: Zion Miller
+// UCFID: 5214774
 // Date: 09/04/2024
 // Class: COP 3223, Professor Parra
 // Purpose: write a program with several internal functions 
@@ -31,28 +32,55 @@ double calcculateDistance() {    //calculate the distance between points
   printf("Enter y coordinate #2: \n");
   y2 = askForUserInput();
 
-  double diameter = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  double Distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
-  printf("Point #1 entered: x1 = %d, y1 = %d\n", x1, y1);
-  printf("Point #2 entered: x2 = %d, y2 = %d\n", x2, y2); 
-  printf("The distance between the two points is %.2f\n", diameter);
+  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
+  printf("The distance between the two points is %.3f\n", Distance);
 
   return Distance
 }
 
-double calculatePerimeter();    //calculate the perimeter
+double calculateWidth()  {   //calculate the width
+  double x1, x2, y1, y2;
+  double distance = calculateDistance(&x1, &x2, &y1, &y2);
+  double width = (x2-x1);
+  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
+  printf("The width of the city encompassed by your request is width = %.3f\n", width);
+}    
 
-  double Perimeter = calculateDistance() * PI;
+double calculateHeight()    {   //calculate the height 
+  double x1, x2, y1, y2;
+  double distance = calculateDistance(&x1, &x2, &y1, &y2);
+  double height = (y2-y1);
+  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
+  printf("The height of the city encompassed by your request is width = %.3f\n", width);
+}    
+
+double calculatePerimeter()   {    //calculate the perimeter
+
+  double x1, x2, y1, y2, Distance;
+  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
+  double perimeter = (Distance * PI)
+  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
+  printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);
+
+  return 3
+}
 
 double calculateArea();    //calculate the area
-  radius = calculateDistance / 2
-
+  double x1, x2, y1, y2, Distance;
+  double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
+  radius = Distance / 2;
   radiussquared = pow(radius, 2);
-  Area = radiussquared * PI
+  Area = radiussquared * PI;
+  printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);
+  printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2); 
+  printf("The area of the city encompassed by your request is Area = %.3f\n", Area);
 
-double calculateWidth();    //calculate the width
-  
-double calculateHeight();    //calculate the height 
 
 int main(int argc, char **argv) {    //main function
   calculateDistance();
