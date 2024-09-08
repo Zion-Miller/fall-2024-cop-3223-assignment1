@@ -22,16 +22,16 @@ double askForUserInput() {    //ask for user input
   return value;
 }
 
-void helperFunction(double *x1, double *x2, double *y1, double *y2) {   //void function so there's no return
+void helperFunction(double x1, double x2, double y1, double y2) {   //void function so there's no return
   //ask for and store coordinate values
   printf("Enter x coordinate #1: \n");  
-  *x1 = askForUserInput();    
+  x1 = askForUserInput();    
   printf("Enter x coordinate #2: \n");
-  *x2 = askForUserInput();
+  x2 = askForUserInput();
   printf("Enter y coordinate #1: \n");
-  *y1 = askForUserInput();
+  y1 = askForUserInput();
   printf("Enter y coordinate #2: \n");
-  *y2 = askForUserInput();
+  y2 = askForUserInput();
 }
 
 double calculateDistance() {    //calculate the distance between points
