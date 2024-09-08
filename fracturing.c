@@ -38,7 +38,7 @@ double calculateDistance() {    //calculate the distance between points
   double x1, x2, y1, y2;
   helperFunction(&x1, &x2, &y1, &y2);   //get coordinates
 
-  double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * f(y2 - y1)));    //distance function (basically pythagorean theorem)
+  double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
 
   printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);   //pdf required output 1
   printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2);   //pdf required output 2
@@ -55,7 +55,7 @@ double calculateWidth()  {   //calculate the width
 }    
 
 double calculateHeight()    {   //calculate the height 
-  double Distance = calculateDistance(&x1, &x2, &y1, &y2);
+  double Distance = calculateDistance();
   printf("The height of the city encompassed by your request is height = %.3f\n", Distance);
 
   return 1.0;
@@ -63,7 +63,7 @@ double calculateHeight()    {   //calculate the height
 
 double calculatePerimeter()   {    //calculate the perimeter
 
-  double Distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
+  double Distance = calculateDistance();
   double perimeter = (Distance * PI);
   printf("The perimeter of the city encompassed by your request is perimeter = %.3f\n", perimeter);
 
