@@ -35,9 +35,9 @@ void helperFunction(double *x1, double *x2, double *y1, double *y2) {   //void f
 }
 
 double calculateDistance() {    //calculate the distance between points
-  double x1, x2, y1, y2;
+  double x1, x2, y1, y2;  //declare variables
   helperFunction(&x1, &x2, &y1, &y2);   //get coordinates
-
+  //calculate distance, or diameter of the circle
   double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
 
   printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);   //pdf required output 1
@@ -48,13 +48,14 @@ double calculateDistance() {    //calculate the distance between points
 }
 
 double calculateWidth()  {   //calculate the width
-
-  double Distance = calculateDistance();
+  //since it is a circle, width is the same as distance
+  double Distance = calculateDistance();    
   printf("The width of the city encompassed by your request is width = %.3f\n", Distance);
   return 1.0;
 }    
 
 double calculateHeight()    {   //calculate the height 
+  //since it is a cicle, height is the same as distance
   double Distance = calculateDistance();
   printf("The height of the city encompassed by your request is height = %.3f\n", Distance);
 
