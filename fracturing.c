@@ -72,9 +72,9 @@ double calculatePerimeter()   {    //calculate the perimeter
 double calculateArea() {    //calculate the area
   double x1, x2, y1, y2, Distance, radius, radiussquared, Area1;
   double distance = calculateDistance(&x1, &x2, &y1, &y2, &Distance);
-  radius = (Distance / 2);
-  radiussquared = pow(radius, 2);
-  Area1 = radiussquared * PI;
+  radius = double (Distance / 2);
+  radiussquared = double pow(radius, 2);
+  Area1 = double (radiussquared * PI);
   printf("The area of the city encompassed by your request is Area = %.3f\n", Area1);
 
   return 1.0;
