@@ -24,9 +24,8 @@ double askForUserInput() {    //ask for user input
 
 double calculateDistance() {    //calculate the distance between points
   double x1, x2, y1, y2;
-  printf("Enter x coordinate #1: \n");
+  printf("Enter both x coordinates: \n");
   x1 = askForUserInput();
-  printf("Enter x coordinate #2: \n");
   x2 = askForUserInput();
   printf("Enter y coordinate #1: \n");
   y1 = askForUserInput();
@@ -43,18 +42,15 @@ double calculateDistance() {    //calculate the distance between points
 }
 
 double calculateWidth()  {   //calculate the width
-  double x1, x2, y1, y2, distance, width;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2);
-  double width = fabs(x2-x1); 
-  printf("The width of the city encompassed by your request is width = %.3f\n", width);
+
+  double Distance = calculateDistance();
+  printf("The width of the city encompassed by your request is width = %.3f\n", Distance);
   return 1.0;
 }    
 
 double calculateHeight()    {   //calculate the height 
-  double x1, x2, y1, y2, distance, height;
-  double distance = calculateDistance(&x1, &x2, &y1, &y2);
-  double height = fabs(y2-y1);
-  printf("The height of the city encompassed by your request is height = %.3f\n", height);
+  double Distance = calculateDistance(&x1, &x2, &y1, &y2);
+  printf("The height of the city encompassed by your request is height = %.3f\n", Distance);
 
   return 1.0;
 }    
