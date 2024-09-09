@@ -22,9 +22,9 @@ double askForUserInput() {    //ask for user input (bonus function)
   return value;
 }
 
-helperFunction() {   //void function so there's no return
+double helperFunction() {   //void function so there's no return
   //declare variables
-  double x1, x2, y1, y2, Distance;
+  double x1, x2, y1, y2;
   //ask for and then store coordinate values using our askForUserInput function
   printf("Enter x coordinate #1: \n");  
   x1 = askForUserInput();    
@@ -45,7 +45,7 @@ helperFunction() {   //void function so there's no return
 
 double calculateDistance() {    //calculate the distance between points
 
-  helperFunction();   //get coordinates
+  double Distance = helperFunction();   //get coordinates
   //calculate distance, or diameter of the circle
   printf("The distance between the two points is %.3f\n", Distance);    //pdf required output 3
 
