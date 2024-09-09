@@ -35,6 +35,7 @@ double helperFunction() {   //void function so there's no return
   printf("Enter y coordinate #2: \n");
   y2 = askForUserInput();
   
+  //calculate and store distance
   double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
 
   printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);   //pdf required output 1
