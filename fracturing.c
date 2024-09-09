@@ -24,7 +24,7 @@ double askForUserInput() {    //ask for user input (bonus function)
 
 double helperFunction() {   //void function so there's no return
   //declare variables
-  double x1, x2, y1, y2;
+  double x1, x2, y1, y2, Distance;
   //ask for and then store coordinate values using our askForUserInput function
   printf("Enter x coordinate #1: \n");  
   x1 = askForUserInput();    
@@ -35,22 +35,22 @@ double helperFunction() {   //void function so there's no return
   printf("Enter y coordinate #2: \n");
   y2 = askForUserInput();
   
-  //calculate and store distance
-  double Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
-
   printf("Point #1 entered: x1 = %.3f, y1 = %.3f\n", x1, y1);   //pdf required output 1
   printf("Point #2 entered: x2 = %.3f, y2 = %.3f\n", x2, y2);   //pdf required output 2
+
+  //calculate and store distance
+  Distance = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));    //distance function (basically pythagorean theorem)
 
   return Distance;
 }
 
 double calculateDistance() {    //calculate the distance between points
 
-  double Distance1 = helperFunction();   //get coordinates
+  double Distance = helperFunction();   //get coordinates
   //calculate distance, or diameter of the circle
-  printf("The distance between the two points is %.3f\n", Distance1);    //pdf required output 3
+  printf("The distance between the two points is %.3f\n", Distance);    //pdf required output 3
 
-  return Distance1;
+  return Distance;
 }
 
 double calculateWidth()  {   //calculate the width
