@@ -46,11 +46,11 @@ double helperFunction() {   //void function so there's no return
 
 double calculateDistance() {    //calculate the distance between points
 
-  double Distance = helperFunction();   //get coordinates
+  double Distance1 = helperFunction();   //get coordinates
   //calculate distance, or diameter of the circle
-  printf("The distance between the two points is %.3f\n", Distance);    //pdf required output 3
+  printf("The distance between the two points is %.3f\n", Distance1);    //pdf required output 3
 
-  return Distance;
+  return Distance1;
 }
 
 double calculateWidth()  {   //calculate the width
