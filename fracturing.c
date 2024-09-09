@@ -22,9 +22,9 @@ double askForUserInput() {    //ask for user input (bonus function)
   return value;
 }
 
-void helperFunction() {   //void function so there's no return
+helperFunction() {   //void function so there's no return
   //declare variables
-  double x1, x1, y1, y2, Distance;
+  double x1, x2, y1, y2, Distance;
   //ask for and then store coordinate values using our askForUserInput function
   printf("Enter x coordinate #1: \n");  
   x1 = askForUserInput();    
